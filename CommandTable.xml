@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyinTree xmlns="http://www.bentley.com/schemas/1.0/MicroStation/AddIn/KeyinTree.xsd">
+
+    <!-- Required | Root Table (OPENROADADDIN) -->
+    <RootKeyinTable ID="root">
+        <Keyword SubtableRef="Commands" CommandWord="OPENROADADDIN">
+            <Options Required="true" />
+        </Keyword>
+    </RootKeyinTable>
+
+    <SubKeyinTables>
+        <!--  Secondary Command Table (OPENROADADDIN _____ )-->
+        <KeyinTable ID="Commands">
+            <Keyword SubtableRef="ReportCmd" CommandWord="REPORT">
+                <Options Required="true" />
+            </Keyword>
+          <!--<Keyword SubtableRef="CreateCmd" CommandWord="CREATE">
+            <Options Required="true" />
+          </Keyword>
+          <Keyword SubtableRef="AnnotationCmd" CommandWord="ANNOTATION">
+            <Options Required="true" />
+          </Keyword>
+          <Keyword SubtableRef="UtilityCmd" CommandWord="UTILITY">
+            <Options Required="true" />
+          </Keyword>-->           
+        </KeyinTable>
+
+        <!-- Report Table (OPENROADADDIN REPORT _____ )  -->
+        <KeyinTable ID="ReportCmd">
+          
+            <Keyword SubtableRef="ReportHorAlignmentsCmd" CommandWord="HORIZONTALALIGNMENTS">
+                <Options Required="false" />
+            </Keyword>
+            <!--<Keyword SubtableRef="AnalyzePointCmd" CommandWord="ANALYZEPOINT">
+                <Options Required="false" />
+            </Keyword>
+            <Keyword CommandWord="PROFILEELEMENTS" />
+            <Keyword CommandWord="STATIONELEVATIONS" />
+            <Keyword CommandWord="ACTIVESTATIONELEVATION"/>
+            <Keyword CommandWord="STATIONOFFSETELEVATION"/>
+            <Keyword CommandWord="DRAPELINEATINTERVAL"/>
+            <Keyword CommandWord="CORRIDORS"/>
+            <Keyword CommandWord="QQCHECKER"/>
+            <Keyword SubtableRef="XSCutPointsCmd" CommandWord="XSCUTPOINTS">
+                <Options Required="false" />
+            </Keyword>-->
+        </KeyinTable>
+      
+        <!-- HorizontalAlignments Table (OPENROADADDIN REPORT HORIZONTALALIGNMENTS _____ ) -->
+        <KeyinTable ID="ReportHorAlignmentsCmd">
+            <Keyword CommandWord="ASANNOTATION" />
+            <Keyword CommandWord="ITEMTYPES"/>
+            <Keyword CommandWord="PICKALIGNMENT"/>
+        </KeyinTable>
+
+        <!-- AnalyzePoint Table (OPENROADADDIN REPORT ANALYZEPOINT _____ ) --><!--
+        <KeyinTable ID="AnalyzePointCmd">
+            <Keyword CommandWord="FROMOCCUPIEDPOINT" />
+        </KeyinTable>
+      
+        --><!-- XSCutPoints Table (OPENROADADDIN REPORT XSCUTPOINTS _____ ) --><!--
+        <KeyinTable ID="XSCutPointsCmd">
+          <Keyword CommandWord="PICKCORRIDOR" />
+          <Keyword CommandWord="ALLCORRIDORS"/>
+        </KeyinTable>-->
+
+        <!-- Report Table (OPENROADADDIN CREATE _____ )  -->
+        <!--<KeyinTable ID="CreateCmd">
+          <Keyword SubtableRef="CreateHorAlignmentsCmd" CommandWord="HORIZONTALALIGNMENTS">
+            <Options Required="false" />
+          </Keyword>
+          <Keyword SubtableRef="CreateVerAlignmentsCmd" CommandWord="VERTICALALIGNMENTS">
+            <Options Required="false" />
+          </Keyword>
+          <Keyword SubtableRef="CreateCorridorItemsCmd" CommandWord="CORRIDORITEMS">
+            <Options Required="false" />
+          </Keyword>
+          <Keyword SubtableRef="CreateCivilCellCmd" CommandWord="CIVILCELL">
+            <Options Required="false" />
+          </Keyword>
+          <Keyword SubtableRef="CreateSuperElevationCmd" CommandWord="SUPERELEVATION">
+            <Options Required="false" />
+          </Keyword>
+          <Keyword SubtableRef="CreateCurveWideningCmd" CommandWord="CURVEWIDENING">
+            <Options Required="false" />
+          </Keyword>
+          <Keyword SubtableRef="CreateForesightPointCmd" CommandWord="FORESIGHTPOINT">
+            <Options Required="false" />
+          </Keyword>
+        </KeyinTable>-->
+
+        <!-- HorizontalAlignmentsCreator Table (OPENROADADDIN CREATE HORIZONTALALIGNMENTS _____ ) -->
+        <!--<KeyinTable ID="CreateHorAlignmentsCmd">
+          <Keyword CommandWord="LINE" />
+          <Keyword CommandWord="ARC"/>
+          <Keyword CommandWord="SPIRAL"/>
+          <Keyword CommandWord="COMPLEX ALIGNMENT"/>
+          <Keyword CommandWord="PI ALIGNMENT"/>
+          <Keyword CommandWord="CURB RETURNS"/>
+        </KeyinTable>-->
+
+        <!-- HorizontalAlignmentsCreator Table (OPENROADADDIN CREATE VERTICALALIGNMENTS _____ ) -->
+        <!--<KeyinTable ID="CreateVerAlignmentsCmd">
+          <Keyword CommandWord="LINE" />
+          <Keyword CommandWord="PARABOLA" />
+          <Keyword CommandWord="COMPLEX ALIGNMENT" />
+        </KeyinTable>-->
+
+        <!-- CorridorItemsCreator Table (OPENROADADDIN CREATE CORRIDORITEMS _____ ) -->
+        <!--<KeyinTable ID="CreateCorridorItemsCmd">
+          <Keyword CommandWord="COMPLEX ALIGNMENT" />
+          <Keyword CommandWord="MODIFYALIGNMENT" />
+          <Keyword CommandWord="SETFEATUREDEFINITION" />
+          <Keyword CommandWord="PROFILE" />
+          <Keyword CommandWord="CORRIDOR" />
+          <Keyword CommandWord="TEMPLATEDROP" />
+          <Keyword CommandWord="KEYSTATION" />
+        </KeyinTable>-->
+
+        <!-- CivilCellItemsCreator Table (OPENROADADDIN CREATE CIVILCELL _____ ) -->
+        <!--<KeyinTable ID="CreateCivilCellCmd">
+          <Keyword CommandWord="PLACE" />
+        </KeyinTable>-->
+
+        <!-- CivilCellItemsCreator Table (OPENROADADDIN CREATE SUPERELEVATION _____ ) -->
+        <!--<KeyinTable ID="CreateSuperElevationCmd">
+          <Keyword CommandWord="PLACE" />
+          <Keyword CommandWord="ASSIGN" />
+        </KeyinTable>-->
+      
+        <!-- CivilCellItemsCreator Table (OPENROADADDIN CREATE CURVEWIDENING _____ ) -->
+        <!--<KeyinTable ID="CreateCurveWideningCmd">
+          <Keyword CommandWord="PLACE" />
+        </KeyinTable>-->
+
+      <!-- ForesightPointCreator Table (OPENROADADDIN CREATE FORESIGHTPOINT _____ ) -->
+      <!--<KeyinTable ID="CreateForesightPointCmd">
+        <Keyword CommandWord="FROMOCCUPIEDPOINT" />
+      </KeyinTable>-->
+      
+        <!-- Report Table (OPENROADADDIN ANNOTATION _____ )  -->
+        <!--<KeyinTable ID="AnnotationCmd">
+          <Keyword CommandWord="REGISTER" />
+          <Keyword CommandWord="UNREGISTER" />
+        </KeyinTable>
+        <KeyinTable ID="UtilityCmd">
+          <Keyword CommandWord="TRACKCURSOR" />
+        </KeyinTable>-->
+    </SubKeyinTables>
+
+    <!-- Maps Keyin Commands to Functions in Keyin.cs File -->
+    <KeyinHandlers>
+        <KeyinHandler Keyin="OPENROADADDIN REPORT HORIZONTALALIGNMENTS"                    Function="OpenRoadAddin.Keyin.CmdHorizontalAlignmentReport"/>
+        <KeyinHandler Keyin="OPENROADADDIN REPORT HORIZONTALALIGNMENTS ASANNOTATION"       Function="OpenRoadAddin.Keyin.CmdHorizontalAlignmentAnnotation"/>
+        <KeyinHandler Keyin="OPENROADADDIN REPORT HORIZONTALALIGNMENTS ITEMTYPES"          Function="OpenRoadAddin.Keyin.CmdHorizontalAlignmentItemTypes"/>
+        <KeyinHandler Keyin="OPENROADADDIN REPORT HORIZONTALALIGNMENTS PICKALIGNMENT"      Function="OpenRoadAddin.Keyin.CmdPickAlignment"/>
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT STATIONELEVATIONS"                       Function="OpenRoadAddin.Keyin.CmdStationElevationsReport"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT PROFILEELEMENTS"                         Function="OpenRoadAddin.Keyin.CmdProfileElementReport"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT ACTIVESTATIONELEVATION"                  Function="OpenRoadAddin.Keyin.CmdActiveStationElevationAtInterval"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT STATIONOFFSETELEVATION"                  Function="OpenRoadAddin.Keyin.CmdStationOffsetElevation"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT DRAPELINEATINTERVAL"                     Function="OpenRoadAddin.Keyin.CmdDrapeLineAtInterval"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT CORRIDORS"                               Function="OpenRoadAddin.Keyin.CmdCorridorReport"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT QQCHECKER"                               Function="OpenRoadAddin.Keyin.CmdQQChecker"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT XSCUTPOINTS"                             Function="OpenRoadAddin.Keyin.CmdXSCutPointReportPickCorridor"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT XSCUTPOINTS PICKCORRIDOR"                Function="OpenRoadAddin.Keyin.CmdXSCutPointReportPickCorridor"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN REPORT XSCUTPOINTS ALLCORRIDORS"                Function="OpenRoadAddin.Keyin.CmdXSCutPointReportAllCorridors"/>-->
+
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE HORIZONTALALIGNMENTS"                    Function="OpenRoadAddin.Keyin.CmdCreateHorizontalAlignmentsLine"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE HORIZONTALALIGNMENTS LINE"               Function="OpenRoadAddin.Keyin.CmdCreateHorizontalAlignmentsLine"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE HORIZONTALALIGNMENTS ARC"                Function="OpenRoadAddin.Keyin.CmdCreateHorizontalAlignmentsArc"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE HORIZONTALALIGNMENTS SPIRAL"             Function="OpenRoadAddin.Keyin.CmdCreateHorizontalAlignmentsSpiral"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE HORIZONTALALIGNMENTS COMPLEX ALIGNMENT"  Function="OpenRoadAddin.Keyin.CmdCreateHorizontalAlignmentsComplexAlignment"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE HORIZONTALALIGNMENTS PI ALIGNMENT"       Function="OpenRoadAddin.Keyin.CmdCreateHorizontalAlignmentsPIAlignment"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE HORIZONTALALIGNMENTS CURB RETURNS"       Function="OpenRoadAddin.Keyin.CmdCreateHorizontalAlignmentsCurbReturns"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE VERTICALALIGNMENTS"                      Function="OpenRoadAddin.Keyin.CmdCreateVerticalAlignmentsLine"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE VERTICALALIGNMENTS LINE"                 Function="OpenRoadAddin.Keyin.CmdCreateVerticalAlignmentsLine"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE VERTICALALIGNMENTS PARABOLA"             Function="OpenRoadAddin.Keyin.CmdCreateVerticalAlignmentsParabola"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE VERTICALALIGNMENTS COMPLEX ALIGNMENT"    Function="OpenRoadAddin.Keyin.CmdCreateVerticalAlignmentsComplexAlignment"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CIVILCELL PLACE"                         Function="OpenRoadAddin.Keyin.CmdCreateCivilCellPlace"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE FORESIGHTPOINT FROMOCCUPIEDPOINT"        Function="OpenRoadAddin.Keyin.CmdCreateForesightPointFromOccupiedPoint"/>-->
+
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CORRIDORITEMS COMPLEX ALIGNMENT"         Function="OpenRoadAddin.Keyin.CmdCreateCorridorItemsComplexAlignment"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CORRIDORITEMS MODIFYALIGNMENT"           Function="OpenRoadAddin.Keyin.CmdCreateCorridorItemsModifyAlignment"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CORRIDORITEMS SETFEATUREDEFINITION"      Function="OpenRoadAddin.Keyin.CmdCreateCorridorItemsSetFeatureDefinition"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CORRIDORITEMS PROFILE"                   Function="OpenRoadAddin.Keyin.CmdCreateCorridorItemsProfile"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CORRIDORITEMS CORRIDOR"                  Function="OpenRoadAddin.Keyin.CmdCreateCorridorItemsCorridor"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CORRIDORITEMS TEMPLATEDROP"              Function="OpenRoadAddin.Keyin.CmdCreateCorridorItemsTemplateDrop"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CORRIDORITEMS KEYSTATION"                Function="OpenRoadAddin.Keyin.CmdCreateCorridorItemsKeyStation"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE SUPERELEVATION PLACE"                    Function="OpenRoadAddin.Keyin.CmdCreateSuperElevation"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE SUPERELEVATION ASSIGN"                   Function="OpenRoadAddin.Keyin.CmdAssignSuperElevation"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN CREATE CURVEWIDENING PLACE"                     Function="OpenRoadAddin.Keyin.CmdCreateCurveWidening"/>-->
+
+        <!--<KeyinHandler Keyin="OPENROADADDIN ANNOTATION REGISTER"                            Function="OpenRoadAddin.Keyin.CmdAnnotationRegister"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN ANNOTATION UNREGISTER"                          Function="OpenRoadAddin.Keyin.CmdAnnotationUnRegister"/>-->
+        <!--<KeyinHandler Keyin="OPENROADADDIN UTILITY TRACKCURSOR"                            Function="OpenRoadAddin.Keyin.CmdTrackCursor"/>-->
+    </KeyinHandlers>
+
+</KeyinTree>
+

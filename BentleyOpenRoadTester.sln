@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "OpenRoadsDesigner", "..\..\out\Winx64\Product\OpenRoadsDesigner\OpenRoadsDesigner\OpenRoadsDesigner.exe", "{CA4ED2F4-8F86-43CF-8433-F8707FABE1E5}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = D:\BentleyCodes\ordcck\out\Winx64\Product\OpenRoadsDesigner\OpenRoadsDesigner\OpenRoadsDesigner.exe
+		RemoteMachine = ASIA14340
+		StartingDirectory = D:\BentleyCodes\ordcck\out\Winx64\Product\OpenRoadsDesigner\OpenRoadsDesigner
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+		IORedirection = Auto
+	EndProjectSection
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "CNCCBIMOpenRoads", "..\..\out\Winx64\Product\CNCCBIMOpenRoads\CNCCBIMOpenRoads\CNCCBIMOpenRoads.exe", "{6FBA5235-A8B4-4704-92C0-9C14CCB1390D}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = D:\BentleyCodes\ordcck\out\Winx64\Product\CNCCBIMOpenRoads\CNCCBIMOpenRoads\CNCCBIMOpenRoads.exe
+		RemoteMachine = ASIA14340
+		StartingDirectory = D:\BentleyCodes\ordcck\out\Winx64\Product\CNCCBIMOpenRoads\CNCCBIMOpenRoads
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+		IORedirection = Auto
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BentleyOpenRoadTester", "BentleyOpenRoadTester.csproj", "{C792745B-E212-4FAC-84BF-CCA3F0120702}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA4ED2F4-8F86-43CF-8433-F8707FABE1E5}.Debug|Any CPU.ActiveCfg = Release
+		{CA4ED2F4-8F86-43CF-8433-F8707FABE1E5}.Debug|x64.ActiveCfg = Release
+		{CA4ED2F4-8F86-43CF-8433-F8707FABE1E5}.Release|Any CPU.ActiveCfg = Release
+		{CA4ED2F4-8F86-43CF-8433-F8707FABE1E5}.Release|x64.ActiveCfg = Release
+		{6FBA5235-A8B4-4704-92C0-9C14CCB1390D}.Debug|Any CPU.ActiveCfg = Release
+		{6FBA5235-A8B4-4704-92C0-9C14CCB1390D}.Debug|x64.ActiveCfg = Release
+		{6FBA5235-A8B4-4704-92C0-9C14CCB1390D}.Release|Any CPU.ActiveCfg = Release
+		{6FBA5235-A8B4-4704-92C0-9C14CCB1390D}.Release|x64.ActiveCfg = Release
+		{C792745B-E212-4FAC-84BF-CCA3F0120702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C792745B-E212-4FAC-84BF-CCA3F0120702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C792745B-E212-4FAC-84BF-CCA3F0120702}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C792745B-E212-4FAC-84BF-CCA3F0120702}.Debug|x64.Build.0 = Debug|Any CPU
+		{C792745B-E212-4FAC-84BF-CCA3F0120702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C792745B-E212-4FAC-84BF-CCA3F0120702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C792745B-E212-4FAC-84BF-CCA3F0120702}.Release|x64.ActiveCfg = Release|Any CPU
+		{C792745B-E212-4FAC-84BF-CCA3F0120702}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDA51495-D8A2-4CFC-9C51-03BF4504C9D0}
+	EndGlobalSection
+EndGlobal

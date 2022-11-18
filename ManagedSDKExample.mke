@@ -1,0 +1,70 @@
+#--------------------------------------------------------------------------------------
+#
+#     $Source: PowerProduct/OpenRoadsDesignerSDK/ORDExamples/ManagedSDKExample/ManagedSDKExample.mke $
+#
+#  $Copyright: (c) 2021 Bentley Systems, Incorporated. All rights reserved. $
+#
+#--------------------------------------------------------------------------------------
+DemoSrcDir   = $(_MakeFilePath)
+PolicyFile = OpenRoadsDesignerSDKPolicy.mki
+appName    = BentleyOpenRoadTester
+ORDMKI = $(ORDE)mki/
+
+DEBUG = 1
+
+#--------------------------------------------------------------------------------------------------
+#  Includes
+#--------------------------------------------------------------------------------------------------
+%include $(ORDMKI)mdl.mki
+    SlnFile=$(_MakeFilePath)BentleyOpenRoadTester.sln
+
+
+%if $(TARGET_PROCESSOR_ARCHITECTURE)=="x64"
+    Platform = x64
+    OutSubDir = Winx64
+%else
+    Platform = x86
+    OutSubDir = Winx86
+%endif
+
+o = $(ManagedSDKExampleBuildDir_)
+
+%if $(TARGET_PROCESSOR_ARCHITECTURE)=="x64"
+    OutSubDir = Winx64
+%else
+    OutSubDir = Winx86
+%endif
+
+always:
+    | ************************************************
+    | * SlnFile = $(SlnFile)
+    | ************************************************
+
+buildConfiguration = "$(Configuration)|$(Platform)"
+
+always:
+    | ************************************************
+    | * Processing ManagedSDKExample ...
+    | * BuildConfiguration=$(buildConfiguration)
+    | * ProductDir= $(ORD)
+    | ************************************************
+
+#--------------------------------------------------------------------------------------------------
+#  Compile
+#--------------------------------------------------------------------------------------------------
+%if defined(BMAKE_DELETE_ALL_TARGETS)
+    Clean:
+        devenv "$(SlnFile)" \/clean $(buildConfiguration)
+
+%else
+
+    %if defined (BMAKE_BUILD_ALL)
+        BuildOp = \/rebuild
+    %else
+        BuildOp = \/build
+    %endif
+
+    BuildOrRebuild:
+        devenv "$(SlnFile)" $(BuildOp) $(Configuration) # $(UseEnvOpt)
+
+%endif
